@@ -1,7 +1,9 @@
 # George Mamaladze
 ## Senior Software Architect & Technology Leader
-
-**Location:** Munich, Germany | **LinkedIn:** [linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)  
+| |
+|--|
+**Location:** Munich, Germany |
+**LinkedIn:** [linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)  
 
 ---
 
@@ -12,8 +14,11 @@ A technology leader with over 25 years of experience designing, building, and de
 
 ## Experience  
 
-### Senior Software Architect  
-**Siemens AG – Factory Automation, Human Machine Interface** | *May 2022 – Present* | Munich, Germany  
+### Senior Software Architect
+| | | |
+|--|--|--|
+| **Siemens AG – Factory Automation, Human Machine Interface** | *May 2022 – Present* | Munich, Germany |
+
 The SIMATIC WinCC Unified System is a new generation of Siemens HMI and SCADA visualization products designed for industrial applications in machine building and factory automation ([siemens.com/wincc-unified](https://www.siemens.com/wincc-unified)). It addresses the modern challenges of digitization in manufacturing by providing a flexible and open platform with IT/OT integration capabilities.  
 
 **Responsibilities:**  
@@ -27,8 +32,11 @@ The SIMATIC WinCC Unified System is a new generation of Siemens HMI and SCADA vi
 
 ---
 
-### Chief Technical Advisor (part-time, freelance)  
-**Syniotec** | *Jul 2022 – Present* | Bremen, Germany (remote)  
+### Chief Technical Advisor (part-time, freelance)
+| | | |
+|--|--|--|
+| **Syniotec** | *Jul 2022 – Present* | Bremen, Germany (remote) |
+
 Syniotec is a fast-growing startup providing digital solutions to the construction industry, enabling companies to optimize operations through IoT-driven telematics and software platforms. As Chief Technical Advisor, I function in practice as the part-time CTO, shaping product vision, technical strategy, and long-term platform strategy.  
 
 **Responsibilities:**  
@@ -43,8 +51,11 @@ Syniotec is a fast-growing startup providing digital solutions to the constructi
 
 ---
 
-### Senior Software Architect  
-**Siemens AG – Corporate Technology** | *May 2018 – May 2022* | Munich, Germany  
+### Senior Software Architect
+| | | |
+|--|--|--|
+| **Siemens AG – Corporate Technology** | *May 2018 – May 2022* | Munich, Germany |
+
 Siemens Corporate Technology served as the central research and innovation hub for Siemens AG.  
 
 **Responsibilities:**  
@@ -59,8 +70,11 @@ Siemens Corporate Technology served as the central research and innovation hub f
 
 ---
 
-### International Advisor for Small Businesses (ASB)  
-**EBRD (European Bank for Reconstruction and Development)** | *Oct 2018 – Jan 2019* | Global (part-time, freelance)  
+### International Advisor for Small Businesses (ASB)
+| | | |
+|--|--|--|
+| **EBRD (European Bank for Reconstruction and Development)** | *Oct 2018 – Jan 2019* | Global (part-time, freelance) |
+
 - Provided strategic guidance and coaching to small businesses in Eastern Europe & CIS.  
 - Mentored software teams in modern engineering practices and agile methods.  
 - Reworked system architectures to align with business objectives.  
@@ -68,8 +82,11 @@ Siemens Corporate Technology served as the central research and innovation hub f
 
 ---
 
-### Principal Software Architect  
-**Huawei – European Research Center** | *Mar 2017 – Apr 2018* | Munich, Germany  
+### Principal Software Architect
+| | | |
+|--|--|--|
+| **Huawei – European Research Center** | *Mar 2017 – Apr 2018* | Munich, Germany |
+
 - Provided technical leadership for 3–5 concurrent high-impact research projects.  
 - Drove project acquisition, requirement analysis, and technical consulting at HQ in China.  
 - Disseminated research findings and knowledge.  
@@ -80,8 +97,11 @@ Siemens Corporate Technology served as the central research and innovation hub f
 
 ---
 
-### Senior Software Architect  
-**Siemens AG – Digital Factory** | *Jul 2009 – Feb 2017* | Fuerth, Germany  
+### Senior Software Architect
+| | | |
+|--|--|--|
+| **Siemens AG – Digital Factory** | *Jul 2009 – Feb 2017* | Fuerth, Germany |
+
 - Software Architect, promoted to Certified Senior Software Architect (2015).  
 - Worked on **TIA Portal**, Siemens’ flagship automation IDE, shipping 5 major releases.  
 - Managed development across full stack (hardware, firmware, application).  
@@ -89,23 +109,32 @@ Siemens Corporate Technology served as the central research and innovation hub f
 
 ---
 
-### Senior Software Architect  
-**encad Ing. mbH** | *Feb 2008 – Jun 2009* | Nuremberg, Germany  
+### Senior Software Architect
+| | | |
+|--|--|--|
+| **encad Ing. mbH** | *Feb 2008 – Jun 2009* | Nuremberg, Germany |
+
 - Assigned to a customer project with 50+ developers.  
 - Conducted architecture reviews and systemic root cause analyses.  
 - Introduced CI, static code analysis, and quality assurance measures.  
 
 ---
 
-### Software Project Lead  
-**IQ-optimize Software AG** | *Aug 2001 – Jan 2008* | Nuremberg, Germany  
+### Software Project Lead
+| | | |
+|--|--|--|
+| **IQ-optimize Software AG** | *Aug 2001 – Jan 2008* | Nuremberg, Germany |
+
 - Launched Germany’s first digital prepaid voucher distribution system with a 10-person team.  
 - Managed lifecycle of a back-office workflow system (product ownership → development → customer training).  
 
 ---
 
-### Head of IT Department  
-**TBC Bank** | *Jan 1999 – Jul 2001* | Tbilisi, Georgia  
+### Head of IT Department
+| | | |
+|--|--|--|
+| **TBC Bank** | *Jan 1999 – Jul 2001* | Tbilisi, Georgia |
+
 - Managed IT infrastructure, ATMs, POS systems, and integrations.  
 - Oversaw administration and supervision of hardware and software.  
 
@@ -113,17 +142,26 @@ Siemens Corporate Technology served as the central research and innovation hub f
 
 ## Education  
 
-### Post-graduate Studies in Computer Science  
-**FernUni Hagen** | *Sep 2003 – Aug 2004* | Hagen, Germany  
-- Free student (Gasthörer) for professional language and technical alignment.  
+### Post-graduate Studies in Computer Science
+| | | |
+|--|--|--|
+| **FernUni Hagen** | *Sep 2003 – Aug 2004* | Hagen, Germany |
 
-### Diploma in Computer Science  
-**Tbilisi State University** | *Sep 1993 – Jun 1999* | Tbilisi, Georgia  
+- Free student (Gasthörer), completed 4 semesters. 
+
+### Diploma in Computer Science
+| | | |
+|--|--|--|
+| **Tbilisi State University** | *Sep 1993 – Jun 1999* | Tbilisi, Georgia |
+
 - Faculty of Applied Mathematics and Computer Science.  
 - Scholarship holder of the George Soros Foundation.  
 
-### Specialized School for Physics and Mathematics  
-**High School** | *Sep 1989 – May 1993* | Tbilisi, Georgia  
+### Specialized School for Physics and Mathematics
+| | | |
+|--|--|--|
+| **High School** | *Sep 1989 – May 1993* | Tbilisi, Georgia |
+- Graduated with honors.
 - Winner (1st Place), International Young Physicists' Tournament.  
 
 ---
