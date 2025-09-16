@@ -1,2 +1,31 @@
-title: ""
-theme: jekyll-theme-slate
+title: "George Mamaladze - CV"
+description: "Professional CV of George Mamaladze, Senior Software Architect & Technology Leader"
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - docker-compose.yml
+  - preview-docker.ps1
+  - DOCKER_PREVIEW.md
+  - README.md

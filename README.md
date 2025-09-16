@@ -49,24 +49,15 @@ The HTML version uses custom CSS (`styles/cv.css`) for:
 
 ## Local Development
 
-To generate the files locally, you'll need:
+To preview your CV locally using Docker:
 
 ```bash
-# Install pandoc
-sudo apt-get install pandoc
+# Start Jekyll container
+docker-compose up -d
 
-# Install LaTeX for PDF generation
-sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-luatex
+# View your CV at http://localhost:4000
+# LiveReload available at http://localhost:35729
 
-# Install wkhtmltopdf for HTML-to-PDF conversion
-sudo apt-get install wkhtmltopdf
-
-# Generate HTML
-pandoc cv.md --from markdown --to html5 --standalone --self-contained --css styles/cv.css --metadata title="George Mamaladze - CV" --output cv.html
-
-# Generate PDF (LaTeX)
-pandoc cv.md --from markdown --to pdf --pdf-engine=lualatex --variable geometry:margin=1in --output cv.pdf
-
-# Generate PDF (from HTML)
-wkhtmltopdf --page-size A4 --margin-top 0.75in --margin-right 0.75in --margin-bottom 0.75in --margin-left 0.75in cv.html cv.pdf
+# Stop the container when done
+docker-compose down
 ```
