@@ -56,6 +56,12 @@ jobs:
           
     - name: Convert HTML to PDF (via wkhtmltopdf)
       run: |
+        # Verify HTML file was created
+        ls -la cv.html
+        echo "HTML file content preview:"
+        head -20 cv.html
+        
+        # Convert HTML to PDF with wkhtmltopdf
         wkhtmltopdf \
           --page-size A4 \
           --margin-top 0.75in \
@@ -63,8 +69,11 @@ jobs:
           --margin-bottom 0.75in \
           --margin-left 0.75in \
           --encoding UTF-8 \
-          --print-media-type \
-          cv.html cv-html.pdf
+          --enable-local-file-access \
+          --disable-smart-shrinking \
+          --no-stop-slow-scripts \
+          --javascript-delay 1000 \
+          file://$(pwd)/cv.html cv-html.pdf
           
     - name: Upload HTML artifact
       uses: actions/upload-artifact@v4
