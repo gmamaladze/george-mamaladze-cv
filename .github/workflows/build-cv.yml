@@ -1,0 +1,111 @@
+name: Build CV (HTML & PDF)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Pandoc
+      uses: pandoc/actions/setup@main
+      with:
+        version: '3.1.11'
+        
+    - name: Install LaTeX (for PDF generation)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-luatex
+        
+    - name: Install wkhtmltopdf (alternative PDF generator)
+      run: |
+        sudo apt-get install -y wkhtmltopdf
+        
+    - name: Convert Markdown to HTML
+      run: |
+        pandoc cv.md \
+          --from markdown \
+          --to html5 \
+          --standalone \
+          --self-contained \
+          --css styles/cv.css \
+          --metadata title="George Mamaladze - CV" \
+          --output cv.html
+          
+    - name: Convert Markdown to PDF (via LaTeX)
+      run: |
+        pandoc cv.md \
+          --from markdown \
+          --to pdf \
+          --pdf-engine=lualatex \
+          --variable geometry:margin=1in \
+          --variable fontsize=11pt \
+          --variable documentclass=article \
+          --variable colorlinks=true \
+          --variable linkcolor=blue \
+          --variable urlcolor=blue \
+          --output cv-latex.pdf
+          
+    - name: Convert HTML to PDF (via wkhtmltopdf)
+      run: |
+        wkhtmltopdf \
+          --page-size A4 \
+          --margin-top 0.75in \
+          --margin-right 0.75in \
+          --margin-bottom 0.75in \
+          --margin-left 0.75in \
+          --encoding UTF-8 \
+          --print-media-type \
+          cv.html cv-html.pdf
+          
+    - name: Upload HTML artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: cv-html
+        path: cv.html
+        retention-days: 90
+        
+    - name: Upload PDF artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: cv-pdf
+        path: |
+          cv-latex.pdf
+          cv-html.pdf
+        retention-days: 90
+        
+    - name: Setup Pages (if main branch)
+      if: github.ref == 'refs/heads/main'
+      uses: actions/configure-pages@v4
+      
+    - name: Upload to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: .
+        
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    
+    permissions:
+      pages: write
+      id-token: write
+      
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
