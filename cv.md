@@ -1,7 +1,6 @@
 # George Mamaladze
 ## Senior Software Architect & Technology Leader
 
-**Email:** [gmamaladze@gmail.com](mailto:gmamaladze@gmail.com) | **Phone:** +49 172 9641990  
 **Location:** Munich, Germany | **LinkedIn:** [linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)  
 
 ---
