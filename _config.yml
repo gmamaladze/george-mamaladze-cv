@@ -1,7 +1,13 @@
-title: "George Mamaladze - CV"
+title: ""
 description: "Professional CV of George Mamaladze, Senior Software Architect & Technology Leader"
 baseurl: ""
 url: ""
+
+# Repository information for GitHub Pages themes
+repository: gmamaladze/george-mamaladze-cv
+
+# Theme
+remote_theme: pages-themes/slate@v0.2.0
 
 # Build settings
 markdown: kramdown
@@ -12,9 +18,7 @@ kramdown:
 
 # Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-remote-theme
 
 # Exclude from processing
 exclude:
