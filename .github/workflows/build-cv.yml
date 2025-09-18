@@ -49,10 +49,25 @@ jobs:
       run: |
         sudo apt-get install -y wkhtmltopdf
           
-    - name: Convert HTML to PDF (via wkhtmltopdf)
+    - name: Build Jekyll site for PDF (without baseurl)
       run: |
-        # Convert Jekyll-built HTML to PDF with wkhtmltopdf
-        ls -la _site/index.html
+        source version.env
+        echo "version: $VERSION" > _config_version.yml
+        echo "baseurl: ''" > _config_pdf.yml
+        bundle exec jekyll build --trace --config _config.yml,_config_version.yml,_config_pdf.yml --destination _site_pdf
+      shell: bash
+
+    - name: Convert HTML to PDF (via wkhtmltopdf with local server)
+      run: |
+        # Start a local HTTP server to serve the PDF-optimized Jekyll site
+        cd _site_pdf
+        python3 -m http.server 8000 &
+        SERVER_PID=$!
+        
+        # Wait for server to start
+        sleep 3
+        
+        # Convert HTML to PDF using HTTP URL (this resolves all relative paths correctly)
         wkhtmltopdf \
           --page-size A4 \
           --margin-top 0.75in \
@@ -60,11 +75,14 @@ jobs:
           --margin-bottom 0.75in \
           --margin-left 0.75in \
           --encoding UTF-8 \
-          --enable-local-file-access \
           --disable-smart-shrinking \
           --no-stop-slow-scripts \
-          --javascript-delay 1000 \
-          file://$(pwd)/_site/index.html "George_Mamaladze_CV.pdf"
+          --javascript-delay 2000 \
+          http://localhost:8000/ "../George_Mamaladze_CV.pdf"
+          
+        # Stop the server
+        kill $SERVER_PID
+        cd ..
           
     - name: Copy PDF to site directory for GitHub Pages
       run: |
