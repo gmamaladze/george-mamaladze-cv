@@ -1,7 +1,7 @@
 ---
 layout: cv
 title: George Mamaladze's CV
-permalink: /cv/
+permalink: /
 ---
 
 # George Mamaladze

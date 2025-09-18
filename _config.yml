@@ -1,3 +1,5 @@
+# Version placeholder (overridden by workflow)
+version: dev
 markdown: kramdown
 style: gmamaladzecv
 

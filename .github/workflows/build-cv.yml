@@ -2,9 +2,8 @@ name: Build CV (HTML & PDF)
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    tags:
+      - 'v*.*.*'
   workflow_dispatch:  # Allow manual triggers
 
 jobs:
@@ -14,6 +13,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Extract version from tag
+      run: bash extract-version.sh
+      shell: bash
 
     # Build Jekyll site so Pages serves processed HTML (with layouts & CSS)
     - name: Setup Ruby
@@ -26,9 +29,17 @@ jobs:
       run: |
         bundle install
 
-    - name: Build Jekyll site
+    - name: Load version env
       run: |
-        bundle exec jekyll build --trace
+        echo "Loading version from version.env"
+        cat version.env
+      shell: bash
+    - name: Build Jekyll site with version
+      run: |
+        source version.env
+        echo "version: $VERSION" > _config_version.yml
+        bundle exec jekyll build --trace --config _config.yml,_config_version.yml
+      shell: bash
       
     - name: Install wkhtmltopdf (PDF generator)
       run: |
@@ -37,7 +48,7 @@ jobs:
     - name: Convert HTML to PDF (via wkhtmltopdf)
       run: |
         # Convert Jekyll-built HTML to PDF with wkhtmltopdf
-        ls -la _site/cv/index.html
+        ls -la _site/index.html
         wkhtmltopdf \
           --page-size A4 \
           --margin-top 0.75in \
@@ -49,27 +60,27 @@ jobs:
           --disable-smart-shrinking \
           --no-stop-slow-scripts \
           --javascript-delay 1000 \
-          file://$(pwd)/_site/cv/index.html cv.pdf
+          file://$(pwd)/_site/index.html "George Mamaladze CV.pdf"
           
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
         name: cv-pdf
-        path: cv.pdf
+        path: "George Mamaladze CV.pdf"
         retention-days: 90
         
-    - name: Setup Pages (if main branch)
-      if: github.ref == 'refs/heads/main'
+    - name: Setup Pages (if version tag)
+      if: startsWith(github.ref, 'refs/tags/v')
       uses: actions/configure-pages@v4
       
     - name: Upload to GitHub Pages
-      if: github.ref == 'refs/heads/main'
+      if: startsWith(github.ref, 'refs/tags/v')
       uses: actions/upload-pages-artifact@v3
       with:
         path: _site
         
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: startsWith(github.ref, 'refs/tags/v')
     needs: build
     runs-on: ubuntu-latest
     

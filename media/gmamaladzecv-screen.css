@@ -1,3 +1,17 @@
+/* Version badge in upper right */
+.cv-version {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    background: #fff;
+    padding: 0.2em 0.8em;
+    border-radius: 1em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+}
 /* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
 
