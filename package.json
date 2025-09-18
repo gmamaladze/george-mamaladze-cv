@@ -7,7 +7,7 @@
     "generate-pdf": "node scripts/generate-pdf.js"
   },
   "dependencies": {
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^24.10.2"
   },
   "engines": {
     "node": ">=18.0.0"
