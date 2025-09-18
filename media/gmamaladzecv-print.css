@@ -73,13 +73,33 @@ code {
 	font: normal normal;
 	font-size: 100%;
 	/*line-height: 1em;*/
-	font-family: Verdana,sans-serif;
+	font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
 	color: #ccc;
 }
 
 p code {
 	position: absolute;
-	left: -13%;
+	left: -18%;
+	width: 15%;
+	display: inline-block;
+}
+
+/* Chip-style tags for technologies inside the Technical Skills section (print) */
+.skills code {
+	position: static;
+	left: auto;
+	width: auto;
+	display: inline-block;
+	text-align: left;
+	padding: 0.05em 0.35em;
+	margin: 0.15em 0.3em 0 0;
+	border-radius: 9999px;
+	border: 0.6pt solid #999;
+	background: #eee;
+	color: #000;
+	white-space: nowrap;
+	font-size: 90%;
+	line-height: 1.4;
 }
 
 

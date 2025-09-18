@@ -1,194 +1,102 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* Theme color palette */
+:root {
+    --color-text: #222222;
+    --color-primary: #0f4c81;      /* h1, strong */
+    --color-secondary: #2e86ab;    /* h2, emphasis */
+    --color-tertiary: #1f7a8c;     /* h3 */
+    --color-code: #5b5bd6;         /* inline code */
+    --color-border: #d0d7de;
+    --color-chip-bg: #f6f8fa;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* end of reset */
-
-
 
 body {
-	font: normal normal 400;
-	font-size: 80%;
-	line-height: 1.5em;
-	/*also written as...  font: normal normal 400 100%/1.5em;*/
-	font-family: Verdana,sans-serif;
-	margin-top: 1em;
-	margin-left: 1em;
+    width: 1000px;
+    background-color: #f0f0f0;
+    border: 0px solid #ccc;
+    font-family: 'Open Sans', sans-serif; /* Body font */
+    margin: 0 auto;
+    color: var(--color-text); /* Better readability */
+}
+
+/* Chip-style tags for technologies inside the Technical Skills section */
+.skills code {
+    position: static;
+    left: auto;
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    padding: 0.15rem 0.5rem;
+    margin: 0.2rem 0.3rem 0 0;
+    border-radius: 9999px; /* pill */
+    border: 1px solid var(--color-border);
+    background: var(--color-chip-bg);
+    color: var(--color-code);
+    white-space: nowrap;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 p {
-	position: relative;
-	left: 33%;
-	margin-bottom: 0.7em;
-	margin-right: 0;
-	width: 55%;
+    position: relative;
+    left: 30%;
+    width: 70%;
+    line-height: 1.6; /* Improve readability */
+}
+
+ul { 
+    position: relative;
+    left: 30%;
+    width: 65%;
+    line-height: 1.6;
 }
 
 code {
-	font: normal normal;
-	font-size: 100%;
-	/*line-height: 1em;*/
-	font-family: Verdana,sans-serif;
-	color: #aaa;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    position: absolute;
+    left: -32%;
+    text-align: right;
+    width: 25%;
+    display: inline-block;
+    color: var(--color-code);
 }
 
-p code {
-	position: absolute;
-	left: -16%;
-}
-
-
-ul { 
-	position: relative;
-	left: 33%;
-	width: 55%;
-	margin-bottom: 1.5em;
-	margin-top: -0.5em;
-}
-
-/*uncomment to get dashes in the list*/
-/*li:before {
-	content: "-";
-	position: relative;
-	left: -0.25em;
-}*/
-
-li {
-	/*second line indent*/
-	padding-left: 1.25em;
-	text-indent: -1.25em;
-	/*color: #777;*/
-}
-
-li ul {
-	position: relative;
-	left: 0;
-	width: 100%;
-	margin-top: 0.25em;
-}
-
-h1,h2,h3,h4 {
-	font-weight: 400;
-	font-family: Cousine,Verdana,sans-serif;
-	width: 55%;
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Heading font */
+    font-weight: 700;
+    color: var(--color-primary); /* default, overridden below */
 }
 
 h1 {
-	text-align: left;
-	font-size: 3em;
-	line-height: 1em;
-	position: relative;
-	left: 33%;
+    position: relative;
+    left: 30%;
+    text-align: left;
+    font-size: 2rem;
+    color: var(--color-primary);
 }
 
-h1+p { 
-	/*subtitle*/
-	font-style: italic;
-	font-size: 110%;
-}
-
-h2 {
-	font-size: 1.1em;
-	color: #a00;
-	margin-top: 3em;
-	position: relative;
-	top: 1.4em;
-	text-align: right;
-	width: 20%;
+h2, h3{
+    position: relative;
+    text-align: right;
+    left: -75%;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
 }
 
 h3 {
-	font-size: 1em;
-	line-height: 2em; 
-	position: relative;
-	top: 1.7em;
-	text-align: right;
-	width: 20%;
+    margin-bottom: -2.6rem;
+    color: var(--color-tertiary);
+}   
+
+h4 {
+    position: relative;
+    text-align: right;
+    left: -75%;
+    margin-bottom: -2.6rem; /* adjust between -0.2rem and -0.6rem as needed */
 }
 
-a {
-	color: inherit;
-	/*text-decoration:none*/
-}
-
-a:hover {
-	color:#39f
-}
-
-#webaddress {
-	margin-top: 1em;
-	position: relative;
-	left: 33%;
-	color: #aaa;
-	font-family: Menlo,monospace,sans-serif;
-	font-size: 80%;
-}
-
-#webaddress a {
-	text-decoration: none;
-}
-
-em {
-	font-weight: bold;
-	font-style: italic;
-}
-
-strong {
-	font-weight: bold;
-}
-
-#address {
-	display: none;
-}
-
-
-
-/*
-@media only screen and (max-width: 480px) {
-	make one column somehow...
-}*/
+/* Emphasis variants */
+b, strong { color: var(--color-primary); }
+i, em { color: var(--color-secondary); }
