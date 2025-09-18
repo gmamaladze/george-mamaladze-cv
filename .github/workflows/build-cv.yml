@@ -64,13 +64,19 @@ jobs:
           --disable-smart-shrinking \
           --no-stop-slow-scripts \
           --javascript-delay 1000 \
-          file://$(pwd)/_site/index.html "George Mamaladze CV.pdf"
+          file://$(pwd)/_site/index.html "George_Mamaladze_CV.pdf"
+          
+    - name: Copy PDF to site directory for GitHub Pages
+      run: |
+        # Copy the generated PDF to _site directory so it's included in the GitHub Pages deployment
+        cp "George_Mamaladze_CV.pdf" _site/
+        ls -la _site/
           
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
         name: cv-pdf
-        path: "George Mamaladze CV.pdf"
+        path: "George_Mamaladze_CV.pdf"
         retention-days: 90
         
     - name: Setup Pages (if main branch)

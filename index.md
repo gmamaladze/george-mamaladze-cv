@@ -10,7 +10,7 @@ permalink: /
 ---
 
 [linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)  
-[Download CV as PDF](George Mamaladze CV.pdf)
+[Download CV as PDF](George_Mamaladze_CV.pdf)
 
 ### Currently
 
