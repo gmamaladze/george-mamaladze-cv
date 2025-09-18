@@ -45,9 +45,14 @@ jobs:
         bundle exec jekyll build --trace --config _config.yml,_config_version.yml
       shell: bash
       
-    - name: Install wkhtmltopdf (PDF generator)
+    - name: Setup Node.js for Puppeteer
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install PDF generation dependencies
       run: |
-        sudo apt-get install -y wkhtmltopdf
+        npm install
           
     - name: Build Jekyll site for PDF (without baseurl)
       run: |
@@ -57,32 +62,9 @@ jobs:
         bundle exec jekyll build --trace --config _config.yml,_config_version.yml,_config_pdf.yml --destination _site_pdf
       shell: bash
 
-    - name: Convert HTML to PDF (via wkhtmltopdf with local server)
+    - name: Convert HTML to PDF (via Puppeteer)
       run: |
-        # Start a local HTTP server to serve the PDF-optimized Jekyll site
-        cd _site_pdf
-        python3 -m http.server 8000 &
-        SERVER_PID=$!
-        
-        # Wait for server to start
-        sleep 3
-        
-        # Convert HTML to PDF using HTTP URL (this resolves all relative paths correctly)
-        wkhtmltopdf \
-          --page-size A4 \
-          --margin-top 0.75in \
-          --margin-right 0.75in \
-          --margin-bottom 0.75in \
-          --margin-left 0.75in \
-          --encoding UTF-8 \
-          --disable-smart-shrinking \
-          --no-stop-slow-scripts \
-          --javascript-delay 2000 \
-          http://localhost:8000/ "../George_Mamaladze_CV.pdf"
-          
-        # Stop the server
-        kill $SERVER_PID
-        cd ..
+        npm run generate-pdf
           
     - name: Copy PDF to site directory for GitHub Pages
       run: |

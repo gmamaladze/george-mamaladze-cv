@@ -7,14 +7,14 @@ Professional CV of George Mamaladze, built with Jekyll and exported to PDF.
 This repository automatically generates the CV in multiple formats:
 
 - **Web**: Jekyll-rendered HTML deployed to GitHub Pages
-- **PDF**: Generated from the Jekyll-built HTML using wkhtmltopdf
+- **PDF**: Generated from the Jekyll-built HTML using Puppeteer (headless Chrome)
 
 ## CI/CD Pipeline
 
 The repository uses GitHub Actions to automatically:
 
 1. **Build** the Jekyll site and deploy to GitHub Pages
-2. **Generate** a PDF from the built HTML (wkhtmltopdf)
+2. **Generate** a PDF from the built HTML using Puppeteer (headless Chrome)
 3. **Upload** the PDF as a workflow artifact
 
 ### Workflow Triggers
@@ -38,9 +38,11 @@ The HTML version uses custom CSS in `media/gmamaladzecv-*.css` for:
 
 - **Web Version**: Available at the GitHub Pages URL (deployed automatically)
 - **Download PDFs**: Check the "Actions" tab for workflow artifacts
-- **Source**: Edit `cv/index.md` and push to update
+- **Source**: Edit `index.md` and push to update
 
 ## Local Development
+
+### Preview with Docker
 
 To preview your CV locally using Docker:
 
@@ -53,4 +55,19 @@ docker-compose up -d
 
 # Stop the container when done
 docker-compose down
+```
+
+### Generate PDF Locally
+
+To generate the PDF locally:
+
+```bash
+# Install Node.js dependencies
+npm install
+
+# Build Jekyll site for PDF
+bundle exec jekyll build --config _config.yml --destination _site_pdf
+
+# Generate PDF
+npm run generate-pdf
 ```
