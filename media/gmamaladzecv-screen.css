@@ -22,7 +22,7 @@
     object-fit: cover;
     border: 1px solid var(--color-primary);
     z-index: 99;
-    top: -75px;
+    top: -65px;
     right: 0%;
 }
 /* Import fonts from Google Fonts */
