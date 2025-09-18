@@ -1,0 +1,236 @@
+{
+  "personal": {
+    "name": "George Mamaladze",
+    "profileImage": "gmamaladze-profile.png",
+    "linkedin": "https://www.linkedin.com/in/gmamaladze",
+    "title": "Senior Software Architect"
+  },
+  "currentPositions": [
+    {
+      "title": "Senior Software Architect",
+      "company": "Siemens AG",
+      "division": "Factory Automation, Human Machine Interface",
+      "location": "Munich, Germany",
+      "type": "full-time"
+    },
+    {
+      "title": "Chief Technical Advisor",
+      "company": "Syniotec",
+      "location": "Bremen, Germany (remote)",
+      "type": "part-time, freelance"
+    }
+  ],
+  "specializations": [
+    "Technology strategy",
+    "cloud-native architectures",
+    "microservices",
+    "team leadership",
+    "industrial automation software"
+  ],
+  "professionalSummary": "A technology leader with over 25 years of experience designing, building, and delivering impactful software solutions. I combine deep conceptual technical knowledge and hands-on expertise with the ability to build and lead high-performing teams. My experience extends from interfacing with customers, understanding requirements to collaborating with executive leadership to ensure timely delivery and strategic market fit.",
+  "experience": [
+    {
+      "period": "May 2022 - Present",
+      "title": "Senior Software Architect",
+      "company": "Siemens AG",
+      "division": "Factory Automation, Human Machine Interface",
+      "location": "Munich, Germany",
+      "description": "The SIMATIC WinCC Unified System is a new generation of Siemens HMI and SCADA visualization products designed for industrial applications in machine building and factory automation. It addresses the modern challenges of digitization in manufacturing by providing a flexible and open platform with IT/OT integration capabilities.",
+      "website": "https://www.siemens.com/wincc-unified",
+      "responsibilities": [
+        "Defining technology strategy, aligning product roadmap with business goals and partners",
+        "Led and mentored the engineering team Architects",
+        "Drove the technology roadmap, scanning for innovations, defining development guidelines and tool chains",
+        "Oversaw the entire development lifecycle, allocating technical resources, collaborating with product owners, finance, and executive leadership to ensure timely delivery and market fit"
+      ],
+      "keyAchievements": [
+        "After 3 years of development of the newly founded business line, delivered the first version of the product to market (currently in limited release, broad release planned)"
+      ]
+    },
+    {
+      "period": "Jul 2022 - Present",
+      "title": "Chief Technical Advisor",
+      "company": "Syniotec",
+      "location": "Bremen, Germany (remote)",
+      "type": "part-time, freelance",
+      "description": "Syniotec is a fast-growing startup providing digital solutions to the construction industry, enabling companies to optimize operations through IoT-driven telematics and software platforms. As Chief Technical Advisor, I function in practice as the part-time CTO, shaping product vision, technical strategy, and long-term platform strategy.",
+      "website": "https://www.syniotec.com",
+      "responsibilities": [
+        "Defined the technical roadmap ensuring scalability, security, and maintainability.",
+        "Advised the founding team and management.",
+        "Mentored engineering teams on best practices in microservices, DevOps, and cloud infrastructure.",
+        "Managed technology stack, vendor partnerships, and integration strategies."
+      ],
+      "keyAchievements": [
+        "Established technical standards and processes that enabled Syniotec's transition from startup to scaling vendor.",
+        "Redesigned the cloud-native backbone of Syniotec software to scale for thousands of concurrent users and data streams."
+      ]
+    },
+    {
+      "period": "May 2018 - May 2022",
+      "title": "Senior Software Architect",
+      "company": "Siemens AG",
+      "division": "Corporate Technology",
+      "location": "Munich, Germany",
+      "description": "Siemens Corporate Technology served as the central research and innovation hub for Siemens AG.",
+      "responsibilities": [
+        "Designed and conceived cloud-native system architectures for strategic projects.",
+        "Advised business units on cloud transformation and innovation.",
+        "Performed architecture reviews and mentored development teams.",
+        "Conducted technology research, academic collaboration, and conference talks."
+      ],
+      "keyAchievements": [
+        "Led the architecture for Spectrum Power digital grid control system (real-time platform with Kubernetes, Kafka, Flink).",
+        "Architected \"Energy as a Service,\" a scalable microservice platform for renewable energy analytics."
+      ]
+    },
+    {
+      "period": "Oct 2018 - Jan 2019",
+      "title": "International Advisor for Small Businesses (ASB)",
+      "company": "EBRD (European Bank for Reconstruction and Development)",
+      "location": "Global",
+      "type": "part-time, freelance",
+      "responsibilities": [
+        "Provided strategic guidance and coaching to small businesses in Eastern Europe & CIS",
+        "Mentored software teams in modern engineering practices and agile methods",
+        "Reworked system architectures to align with business objectives",
+        "Introduced structured processes, tools, and templates to improve execution"
+      ]
+    },
+    {
+      "period": "Mar 2017 - Apr 2018",
+      "title": "Principal Software Architect",
+      "company": "Huawei",
+      "division": "European Research Center",
+      "location": "Munich, Germany",
+      "responsibilities": [
+        "Provided technical leadership for 3–5 concurrent high-impact research projects",
+        "Drove project acquisition, requirement analysis, and technical consulting at HQ in China",
+        "Disseminated research findings and knowledge"
+      ],
+      "keyAchievements": [
+        "Architected methodology and toolchain for modularizing large-scale Java projects.",
+        "Designed scalable microservice architecture for Huawei Cloud IDE."
+      ]
+    },
+    {
+      "period": "Jul 2009 - Feb 2017",
+      "title": "Senior Software Architect",
+      "company": "Siemens AG",
+      "division": "Digital Factory",
+      "location": "Fuerth, Germany",
+      "description": "Software Architect, promoted to Certified Senior Software Architect (2015). Worked on TIA-Portal, Siemens' flagship automation IDE, shipping 5 major releases. Managed development across full stack (hardware, firmware, application). Interfaced with customers and partners for product launches",
+      "website": "https://www.siemens.com/tia-portal"
+    },
+    {
+      "period": "Feb 2008 - Jun 2009",
+      "title": "Senior Software Architect",
+      "company": "encad Ing. mbH",
+      "location": "Nuremberg, Germany",
+      "responsibilities": [
+        "Assigned to a customer project with 50+ developers",
+        "Conducted architecture reviews and systemic root cause analyses",
+        "Introduced CI, static code analysis, and quality assurance measures"
+      ]
+    },
+    {
+      "period": "Aug 2001 - Jan 2008",
+      "title": "Software Project Lead",
+      "company": "IQ-optimize Software AG",
+      "location": "Nuremberg, Germany",
+      "description": "Launched Germany's first digital prepaid voucher distribution system with a 10-person team. Managed lifecycle of a back-office workflow system (product ownership → development → customer training)."
+    },
+    {
+      "period": "Jan 1999 - Jul 2001",
+      "title": "Head of IT Department",
+      "company": "TBC Bank",
+      "location": "Tbilisi, Georgia",
+      "responsibilities": [
+        "Managed IT infrastructure, ATMs, POS systems, and integrations",
+        "Oversaw administration and supervision of hardware and software"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "Sep 2003 - Aug 2004",
+      "degree": "Post-graduate Studies in Computer Science",
+      "institution": "FernUni Hagen",
+      "location": "Hagen, Germany",
+      "details": "Free student (Gasthörer), completed 4 semesters"
+    },
+    {
+      "period": "Sep 1993 - Jun 1999",
+      "degree": "Diploma in Computer Science",
+      "institution": "Tbilisi State University",
+      "location": "Tbilisi, Georgia",
+      "faculty": "Faculty of Applied Mathematics and Computer Science",
+      "details": "Scholarship holder of the George Soros Foundation"
+    },
+    {
+      "period": "Sep 1989 - May 1993",
+      "degree": "Specialized School for Physics and Mathematics",
+      "institution": "High School",
+      "location": "Tbilisi, Georgia",
+      "achievements": [
+        "Graduated with honors",
+        "Winner (1st Place), International Young Physicists' Tournament"
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "year": "2018",
+      "title": "Certified AWS Solution Architect"
+    },
+    {
+      "year": "2015",
+      "title": "CodeProject MVP"
+    },
+    {
+      "year": "2014",
+      "title": "Certified Senior Software Architect"
+    },
+    {
+      "year": "2013",
+      "title": "Member of Agile Alliance"
+    },
+    {
+      "title": "Agile Manifesto Translator"
+    },
+    {
+      "title": "Co-author of several patents"
+    },
+    {
+      "title": "Open Source Enthusiast"
+    }
+  ],
+  "languages": {
+    "fluent": ["English", "German"],
+    "basic": ["Chinese"],
+    "native": ["Russian", "Georgian"]
+  },
+  "technicalSkills": {
+    "languagesAndFrameworks": [
+      "C#", "Java", "Python", "TypeScript", "Node.js", "ASP.NET Core", "Angular"
+    ],
+    "architecture": [
+      "OO-Patterns (GoF)", "Microservice Patterns", "Architecture Evaluation", 
+      "Requirements Engineering", "Domain Driven Design", "Testing Strategies", 
+      "Guidance & Governance", "Continuous Delivery", "AWS Well-Architected Framework", 
+      "Cloud Cost Management", "Event-Driven Architecture"
+    ],
+    "platformsAndProducts": [
+      "Cloud Platforms", "Kubernetes", "Kafka", "Flink", "PostgreSQL", 
+      "DynamoDB", "Terraform", "Prometheus", "Grafana", "OpenTelemetry"
+    ],
+    "tools": [
+      "Git", "Azure DevOps", "Visual Studio Code", "IntelliJ IDEA", 
+      "Docker", "GitHub Actions", "GitLab CI", "SonarQube", "JFrog"
+    ],
+    "practices": [
+      "Agile", "Scrum", "Lean Management", "Clean Code", "TDD", 
+      "CI/CD", "Management 3.0"
+    ]
+  }
+}

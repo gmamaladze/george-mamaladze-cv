@@ -61,6 +61,9 @@ async function generatePDF() {
     // Set viewport for consistent rendering
     await page.setViewport({ width: 1200, height: 800 });
     
+    // Emulate print media to use print CSS instead of screen CSS
+    await page.emulateMediaType('print');
+    
     console.log('Navigating to page...');
     await page.goto('http://localhost:8000/', { 
       waitUntil: 'networkidle2',
