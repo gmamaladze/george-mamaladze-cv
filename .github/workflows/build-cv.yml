@@ -14,53 +14,30 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
-    - name: Setup Pandoc
-      uses: pandoc/actions/setup@main
+
+    # Build Jekyll site so Pages serves processed HTML (with layouts & CSS)
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        version: '3.1.11'
-        
-    - name: Install LaTeX (for PDF generation)
+        ruby-version: '3.2'
+        bundler-cache: true
+
+    - name: Install Jekyll dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-luatex
-        
-    - name: Install wkhtmltopdf (alternative PDF generator)
+        bundle install
+
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build --trace
+      
+    - name: Install wkhtmltopdf (PDF generator)
       run: |
         sudo apt-get install -y wkhtmltopdf
-        
-    - name: Convert Markdown to HTML
-      run: |
-        pandoc cv.md \
-          --from markdown \
-          --to html5 \
-          --standalone \
-          --self-contained \
-          --css styles/cv.css \
-          --output cv.html
-          
-    - name: Convert Markdown to PDF (via LaTeX)
-      run: |
-        pandoc cv.md \
-          --from markdown \
-          --to pdf \
-          --pdf-engine=lualatex \
-          --variable geometry:margin=1in \
-          --variable fontsize=11pt \
-          --variable documentclass=article \
-          --variable colorlinks=true \
-          --variable linkcolor=blue \
-          --variable urlcolor=blue \
-          --output cv-latex.pdf
           
     - name: Convert HTML to PDF (via wkhtmltopdf)
       run: |
-        # Verify HTML file was created
-        ls -la cv.html
-        echo "HTML file content preview:"
-        head -20 cv.html
-        
-        # Convert HTML to PDF with wkhtmltopdf
+        # Convert Jekyll-built HTML to PDF with wkhtmltopdf
+        ls -la _site/cv/index.html
         wkhtmltopdf \
           --page-size A4 \
           --margin-top 0.75in \
@@ -72,22 +49,13 @@ jobs:
           --disable-smart-shrinking \
           --no-stop-slow-scripts \
           --javascript-delay 1000 \
-          file://$(pwd)/cv.html cv-html.pdf
+          file://$(pwd)/_site/cv/index.html cv.pdf
           
-    - name: Upload HTML artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: cv-html
-        path: cv.html
-        retention-days: 90
-        
-    - name: Upload PDF artifacts
+    - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
         name: cv-pdf
-        path: |
-          cv-latex.pdf
-          cv-html.pdf
+        path: cv.pdf
         retention-days: 90
         
     - name: Setup Pages (if main branch)
@@ -98,7 +66,7 @@ jobs:
       if: github.ref == 'refs/heads/main'
       uses: actions/upload-pages-artifact@v3
       with:
-        path: .
+        path: _site
         
   deploy:
     if: github.ref == 'refs/heads/main'

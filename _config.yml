@@ -17,3 +17,4 @@ exclude:
   - DOCKER_PREVIEW.md
   - README.md
   - tmp/
+  - cv.md

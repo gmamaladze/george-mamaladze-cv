@@ -1,25 +1,21 @@
 # George Mamaladze CV
 
-Professional CV of George Mamaladze, automatically converted to HTML and PDF formats.
+Professional CV of George Mamaladze, built with Jekyll and exported to PDF.
 
 ## Formats Available
 
 This repository automatically generates the CV in multiple formats:
 
-- **Markdown**: [`cv.md`](cv.md) - Source format
-- **HTML**: Generated automatically and deployed to GitHub Pages
-- **PDF**: Two versions generated:
-  - LaTeX-based PDF (high-quality typography)
-  - HTML-based PDF (matches web styling)
+- **Web**: Jekyll-rendered HTML deployed to GitHub Pages
+- **PDF**: Generated from the Jekyll-built HTML using wkhtmltopdf
 
 ## CI/CD Pipeline
 
 The repository uses GitHub Actions to automatically:
 
-1. **Convert** markdown to HTML and PDF on every push to main
-2. **Deploy** HTML version to GitHub Pages
-3. **Generate** downloadable artifacts for all formats
-4. **Style** the output with professional CSS
+1. **Build** the Jekyll site and deploy to GitHub Pages
+2. **Generate** a PDF from the built HTML (wkhtmltopdf)
+3. **Upload** the PDF as a workflow artifact
 
 ### Workflow Triggers
 
@@ -30,22 +26,19 @@ The repository uses GitHub Actions to automatically:
 ### Artifacts Generated
 
 After each workflow run, you can download:
-- `cv-html` - Styled HTML version
-- `cv-pdf` - Both LaTeX and HTML-generated PDF versions
+- `cv-pdf` - PDF generated from the web version
 
 ## Styling
 
-The HTML version uses custom CSS (`styles/cv.css`) for:
-- Professional typography using Georgia/Times serif fonts
-- Responsive design for web and mobile
-- Print-optimized styling
-- Consistent spacing and color scheme
+The HTML version uses custom CSS in `media/gmamaladzecv-*.css` for:
+- Professional typography and readable layout
+- Screen and print specific styles
 
 ## Accessing Your CV
 
 - **Web Version**: Available at the GitHub Pages URL (deployed automatically)
 - **Download PDFs**: Check the "Actions" tab for workflow artifacts
-- **Source**: Edit `cv.md` and push to update all formats automatically
+- **Source**: Edit `cv/index.md` and push to update
 
 ## Local Development
 
