@@ -84,7 +84,7 @@ async function generatePDF() {
     console.log('Media check:', backgroundCheck);
     
     // Additional wait to ensure print styles are fully applied
-    await page.waitForTimeout(2000);
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     console.log('Page loaded, generating PDF...');
     
