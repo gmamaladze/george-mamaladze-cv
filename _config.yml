@@ -3,6 +3,7 @@ style: gmamaladzecv
 
 # Repository configuration
 repository: gmamaladze/george-mamaladze-cv
+baseurl: /george-mamaladze-cv
 
 # Include media files
 include:

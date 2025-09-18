@@ -66,27 +66,27 @@ p {
 	left: 28%;
 	margin-bottom: 0.2em;
 	margin-right: 0;
-	width: 70%;
+	width: 60%;
 }
 
 code {
 	font: normal normal;
-	font-size: 60%;
+	font-size: 100%;
 	/*line-height: 1em;*/
-	font-family: Menlo,monospace,sans-serif;
+	font-family: Verdana,sans-serif;
 	color: #ccc;
 }
 
 p code {
 	position: absolute;
-	left: -11%;
+	left: -13%;
 }
 
 
 ul { 
 	position: relative;
 	left: 28%;
-	width: 65%;
+	width: 55%;
 	margin-bottom: 1em;
 	/*margin-top: -0.5em;*/
 }
@@ -115,7 +115,7 @@ li ul {
 h1,h2,h3,h4 {
 	font-weight: 400;
 	font-family: Cousine,Verdana,sans-serif;
-	width: 65%;
+	width: 55%;
 }
 
 h1 {

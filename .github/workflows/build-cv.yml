@@ -37,7 +37,6 @@ jobs:
           --standalone \
           --self-contained \
           --css styles/cv.css \
-          --metadata title="George Mamaladze - CV" \
           --output cv.html
           
     - name: Convert Markdown to PDF (via LaTeX)
