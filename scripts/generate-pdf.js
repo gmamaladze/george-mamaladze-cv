@@ -61,14 +61,30 @@ async function generatePDF() {
     // Set viewport for consistent rendering
     await page.setViewport({ width: 1200, height: 800 });
     
-    // Emulate print media to use print CSS instead of screen CSS
-    await page.emulateMediaType('print');
-    
     console.log('Navigating to page...');
     await page.goto('http://localhost:8000/', { 
       waitUntil: 'networkidle2',
       timeout: 30000 
     });
+    
+    // Force print media and verify it's applied
+    console.log('Setting print media...');
+    await page.emulateMediaType('print');
+    
+    // Add some debugging - check which CSS is being applied
+    const backgroundCheck = await page.evaluate(() => {
+      const body = document.body;
+      const computedStyle = window.getComputedStyle(body);
+      return {
+        backgroundColor: computedStyle.backgroundColor,
+        mediaType: window.matchMedia('print').matches ? 'print' : 'screen'
+      };
+    });
+    
+    console.log('Media check:', backgroundCheck);
+    
+    // Additional wait to ensure print styles are fully applied
+    await page.waitForTimeout(2000);
     
     console.log('Page loaded, generating PDF...');
     
