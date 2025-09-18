@@ -5,6 +5,8 @@ permalink: /
 ---
 
 # George Mamaladze
+![George Mamaladze](gmamaladze-profile.png){: .profile-image}
+
 ---
 
 [linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)

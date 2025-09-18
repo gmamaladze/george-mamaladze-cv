@@ -12,6 +12,19 @@
     z-index: 100;
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Profile image in upper right corner */
+.profile-image {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 60%;
+    object-fit: cover;
+    border: 1px solid var(--color-primary);
+    z-index: 99;
+    top: -75px;
+    right: 0%;
+}
 /* Import fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
 
