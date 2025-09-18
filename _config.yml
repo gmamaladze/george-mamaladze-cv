@@ -1,35 +1,18 @@
-title: ""
-description: "Professional CV of George Mamaladze, Senior Software Architect & Technology Leader"
-baseurl: ""
-url: ""
+markdown: kramdown
+style: gmamaladzecv
 
-# Repository information for GitHub Pages themes
+# Repository configuration
 repository: gmamaladze/george-mamaladze-cv
 
-# Theme
-remote_theme: pages-themes/slate@v0.2.0
+# Include media files
+include:
+  - media/
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# Plugins
-plugins:
-  - jekyll-remote-theme
-
-# Exclude from processing
+# Exclude unnecessary files
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
   - docker-compose.yml
-  - preview-docker.ps1
   - DOCKER_PREVIEW.md
   - README.md
+  - tmp/

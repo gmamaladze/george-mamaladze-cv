@@ -4,6 +4,7 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 tmp
+_layouts/
 
 # Ruby/Bundler
 vendor/
