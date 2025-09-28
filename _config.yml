@@ -16,9 +16,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - docker-compose.yml
-  - DOCKER_PREVIEW.md
   - README.md
   - tmp/
-  - vendor/
-  - cv/
-  - cv.md
