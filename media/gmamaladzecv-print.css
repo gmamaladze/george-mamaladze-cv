@@ -15,24 +15,35 @@
 /* Profile image in upper right corner for print */
 .profile-image {
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 88px;
+    height: 88px;
     border-radius: 60%;
     object-fit: cover;
     border: 1px solid var(--color-primary);
     z-index: 99;
-    top: -50px;
+    top: -48px;
     right: 0%;
 }
 
+.download-link {
+  /* do noth show text but take space */
+    display: inline-block;
+    color: #ffffff;
+    visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+}
 /* Version badge for print */
 .cv-version {
+    display: none; /* Hide by default */
     position: absolute;
     top: 20px;
-    right: 40px;
+    right: 60px;
     font-size: 0.9rem;
     color: var(--color-secondary);
-    background: #fff;
+    background: #d90707;
     padding: 0.1em 0.5em;
     border-radius: 0.8em;
     z-index: 100;
@@ -113,7 +124,7 @@ h2, h3{
     position: relative;
     text-align: right;
     left: -85%;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     color: var(--color-secondary);
 }
 
@@ -125,8 +136,8 @@ h3 {
 h4 {
     position: relative;
     text-align: right;
-    left: -75%;
-    margin-bottom: -2.6rem; /* adjust between -0.2rem and -0.6rem as needed */
+    left: -82%;
+    margin-bottom: -2.6rem;
 }
 
 /* Emphasis variants */
