@@ -1,7 +1,7 @@
 # George Mamaladze CV
 
 Professional CV of George Mamaladze, built with Jekyll.
-Claude 4.7 has been used but in a "Gini in the bottle way" (see The interview with Kent Beck).
+Claude Sonnet 4 has been used but in a "Gini in the bottle way" (see The interview with Kent Beck).
 
 ## Things to remember (to future George)
 - `index.md` contains all the text and formating

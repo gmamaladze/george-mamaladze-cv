@@ -1,17 +1,13 @@
-# Version placeholder (overridden by workflow)
-version: dev
+version: dev # Version placeholder (overridden by workflow)
 markdown: kramdown
 style: gmamaladzecv
 
-# Repository configuration
 repository: gmamaladze/george-mamaladze-cv
 baseurl: /george-mamaladze-cv
 
-# Include CSS files
 include:
   - css/
 
-# Exclude unnecessary files
 exclude:
   - Gemfile
   - Gemfile.lock
