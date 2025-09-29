@@ -7,9 +7,9 @@ style: gmamaladzecv
 repository: gmamaladze/george-mamaladze-cv
 baseurl: /george-mamaladze-cv
 
-# Include media files
+# Include CSS files
 include:
-  - media/
+  - css/
 
 # Exclude unnecessary files
 exclude:
