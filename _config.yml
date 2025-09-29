@@ -18,3 +18,4 @@ exclude:
   - docker-compose.yml
   - README.md
   - tmp/
+  - vendor/
