@@ -92,13 +92,14 @@ async function generatePDF() {
       path: path.join(__dirname, '..', 'George_Mamaladze_CV.pdf'),
       format: 'A4',
       margin: {
-        top: '0.75in',
-        right: '0.75in',
-        bottom: '0.75in',
-        left: '0.75in'
+        top: '0.4in',
+        right: '0.4in',
+        bottom: '0.4in',
+        left: '0.4in'
       },
       printBackground: true,
-      preferCSSPageSize: false
+      // Prefer CSS @page size when available, but fall back to explicit A4 format above.
+      preferCSSPageSize: true
     });
     
     await browser.close();
