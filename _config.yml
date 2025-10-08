@@ -1,6 +1,6 @@
 version: dev # Version placeholder (overridden by workflow)
 markdown: kramdown
-style: gmamaladzecv
+style: cobalt
 
 repository: gmamaladze/gmamaladze.github.io
 baseurl: ""

@@ -9,8 +9,9 @@ permalink: /
 
 ---
 
-[linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)  
-[Download CV as PDF](George_Mamaladze_CV.pdf){: .download-link}
+[Download PDF](George_Mamaladze_CV.pdf){: .download-link}
+
+[linkedin.com/in/gmamaladze](https://www.linkedin.com/in/gmamaladze)
 
 ### Currently
 
@@ -23,7 +24,7 @@ permalink: /
 
 Technology strategy, cloud-native architectures, microservices, team leadership, and industrial automation software
 
-### Professional Summary
+### Summary
 
 A technology leader with over 25 years of experience designing, building, and delivering impactful software solutions. I combine deep conceptual technical knowledge and hands-on expertise with the ability to build and lead high-performing teams. My experience extends from interfacing with customers, understanding requirements to collaborating with executive leadership to ensure timely delivery and strategic market fit.
 
@@ -48,13 +49,13 @@ The SIMATIC WinCC Unified System is a new generation of Siemens HMI and SCADA vi
 `Jul 2022 - Present`
 __Chief Technical Advisor (part-time, freelance)__, *Syniotec*, Bremen, Germany (remote)
 
-[Syniotec](https://www.syniotec.com) is a fast-growing startup providing digital solutions to the construction industry, enabling companies to optimize operations through IoT-driven telematics and software platforms. As Chief Technical Advisor, I function in practice as the part-time CTO, shaping product vision, technical strategy, and long-term platform strategy.  
+[Syniotec](https://www.syniotec.com) is a fast-growing startup providing digital solutions to the construction industry, enabling companies to optimize operations through IoT-driven telematics and software platforms. As Chief Technical Advisor, I function in practice as the part-time CTO.  
 
 **Responsibilities**  
-- Defined the technical roadmap ensuring scalability, security, and maintainability.  
-- Advised the founding team and management.  
-- Mentored engineering teams on best practices in microservices, DevOps, and cloud infrastructure.  
-- Managed technology stack, vendor partnerships, and integration strategies.  
+- Defining the technical roadmap ensuring scalability, security, and maintainability.  
+- Advising the founding team and management.  
+- Mentoring engineering teams on best practices in microservices, DevOps, and cloud infrastructure.  
+- Managing technology stack, vendor partnerships, and integration strategies.  
 
 **Key Achievements**  
 - Established technical standards and processes that enabled Syniotec’s transition from startup to scaling vendor.  
@@ -73,7 +74,7 @@ Siemens Corporate Technology served as the central research and innovation hub f
 - Conducted technology research, academic collaboration, and conference talks.  
 
 **Key Achievements**  
-- Led the architecture for Spectrum Power digital grid control system (real-time platform with Kubernetes, Kafka, Flink).  
+- Led the architecture for Spectrum Power NG digital grid control system (real-time platform with Kubernetes, Kafka, Flink).  
 - Architected “Energy as a Service,” a scalable microservice platform for renewable energy analytics.  
 
 
