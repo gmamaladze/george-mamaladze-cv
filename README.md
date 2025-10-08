@@ -36,3 +36,8 @@ docker-compose down
 
 - Local version does not generate (re-generate) PDF. Use ctrl+p to preview the pront version. The download link goes into the void.
 - Local version does not display the version number, a placeholder is used instead.
+
+## Publishing
+There are two types of GitHub pages. Project and User/Organization. This is a User/Organization page. That's why it must be in the `main` branch and the repository must be named `gmamaladze.github.io`.
+
+Website would be published under http://gmamaladze.github.io but the custom domain is used: https://cv.mamala.io AWS Route 53 is used for DNS management. Domain will renew automatically.
